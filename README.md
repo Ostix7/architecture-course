@@ -4,8 +4,8 @@
 ![image](https://user-images.githubusercontent.com/66085923/207378748-74a27397-3f5c-4d54-bfb6-5637669f6010.png)
 
 1. Streaming service:
-AWS Elemental MediaLive, бере вхідний канал і транскодує ваш вміст в один адаптивний бітрейт . Як вихіднi данi у нас буде HTTP Live Streaming (HLS) потік ![image]
-Amazon Simple Storage Service (Amazon S3) надає масштабований високодоступний бакет для розміщення закодованих сегментів.
+AWS Elemental MediaLive, бере вхідний канал і транскодує ваш вміст в один адаптивний бітрейт . Як вихіднi данi у нас буде HTTP Live Streaming (HLS) потік 
+Amazon Simple Storage Service (Amazon S3) надає масштабований високодоступний бакет для розміщення закодованих сегментів.
 Дистрибутив Amazon CloudFront налаштований на використання користувацьких кінцевих точок Amazon S3 як свого походження. Дистрибутив CloudFront доставляє вашу пряму трансляцію глядачам з низькою затримкою та високою швидкістю передачі.
 
 
