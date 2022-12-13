@@ -4,17 +4,14 @@
 ![image](https://user-images.githubusercontent.com/66085923/207378748-74a27397-3f5c-4d54-bfb6-5637669f6010.png)
 
 1. Streaming service:
-AWS Elemental MediaLive, бере вхідний канал і транскодує ваш вміст в один адаптивний бітрейт . Як вихіднi данi у нас буде HTTP Live Streaming (HLS) потік ![image](https://user-images.githubusercontent.com/66085923/207379057-7213e2c4-f2d1-4dd7-9f4f-531c640b16cd.png)
+AWS Elemental MediaLive, бере вхідний канал і транскодує ваш вміст в один адаптивний бітрейт . Як вихіднi данi у нас буде HTTP Live Streaming (HLS) потік ![image]
 Amazon Simple Storage Service (Amazon S3) надає масштабований високодоступний бакет для розміщення закодованих сегментів.
-![image](https://user-images.githubusercontent.com/66085923/207379114-58050882-8992-49ed-a203-6fe8ba933e03.png)
 Дистрибутив Amazon CloudFront налаштований на використання користувацьких кінцевих точок Amazon S3 як свого походження. Дистрибутив CloudFront доставляє вашу пряму трансляцію глядачам з низькою затримкою та високою швидкістю передачі.
-![image](https://user-images.githubusercontent.com/66085923/207379161-9f4e7c3c-0741-4eb2-beb2-a3c7b088e998.png)
 
 
 
 2. Updoad/Recieve video service:
 
-![image](https://user-images.githubusercontent.com/66085923/207379862-e5db49eb-2907-4937-b5dc-a2a18754a905.png)
 Коментарi:
 Завантаження вiдео
 1. Відеодані зберігаються в Amazon S3, що забезпечує масштабованість, доступність, безпеку та продуктивність даних.
@@ -39,4 +36,4 @@ Amazon Simple Storage Service (Amazon S3) надає масштабований 
 3. Auth microservice:
 
 Load Balancer та EС2 autoscaling часто працюють разом. Балансер буде обирати, до якого серверу говорити, щоб не було так щоб якийcь сервер нiчого не робить, а iнший робить за багатьох. А Autosclaing буде пiдтримува достатню кiлькiсть iнстансiв. Тобто коли мала нагрузка – у нас буде лише один iнстанс. Наприклад , уночi. Коли нагрузка буде бiльше – буде бiльше та Load Balancer буде додавати за потребую. Зберiгати користувачiв будемо в реляцiйнiй базi данних. Загалом буде 2 сутностi, юзер та роль. Сама авторизацiя буде працювати через JWT токени, якi iншi сервiси будуть просити у поточного сервicу.
-![Uploading image.png…]()
+
